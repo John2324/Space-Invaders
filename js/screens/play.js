@@ -5,7 +5,11 @@ game.PlayScreen = me.ScreenObject.extend({
     onResetEvent : function () {
         me.game.world.addChild(new me.ColorLayer("background", "#000000"), 0);
         me.game.world.addChild(me.pool.pull("player"), 1);
-        me.game.world.addChild(me.pool.pull("enemy", 50, 50), 2);
+
+        this.enemyManager = new game.EnemyManager();
+        this.enemyManager.createEnemies();
+        me.game.world.addChild(this.enemyManager, 2);
+
 
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
