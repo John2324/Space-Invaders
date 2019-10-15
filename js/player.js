@@ -8,3 +8,4 @@ game.Player = me.Sprite.extend({
         ]);
     }
   });
+  
