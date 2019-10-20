@@ -24,6 +24,20 @@ var game = {
         this.playScreen = new game.PlayScreen();
         me.state.set(me.state.PLAY, this.playScreen);
 
+        //Create the Menu Screen
+        this.menuScreen = new game.MenuScreen();
+        me.state.set(me.state.MENU, this.menuScreen());
+        //me.state.transition("fade", "#000", 250);
+        //me.state.change(me.state.MENU);
+
+        //Create the Loss Screen
+        this.lossScreen = new game.LossScreen();
+        me.state.set(me.state.GAMOVER, this.lossScreen());
+
+        //Create the Win Screen
+        this.winScreen = new game.WinScreen();
+        me.state.set(me.state.GAME_END, this.winScreen());
+
         // start the game
         me.state.change(me.state.PLAY);
     }

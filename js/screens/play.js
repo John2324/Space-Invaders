@@ -1,6 +1,8 @@
 game.PlayScreen = me.ScreenObject.extend({
     checkIfLoss : function (y) {
         if (y >= this.player.pos.y) {
+
+            //Change this code to the "loss" screen with me.state.change(me.state.GAMEOVER)
            this.reset();
         }
     },
@@ -38,3 +40,10 @@ game.PlayScreen = me.ScreenObject.extend({
         
     }
   });
+
+
+  /* Add Menu Screen
+  game.MenuScreen = me.ScreenObject.extend({
+
+  })
+*/
