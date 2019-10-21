@@ -39,7 +39,7 @@ var game = {
 
 
         // set a global fading transition for the screen
-        me.state.transition("fade", "#FFFFFF", 250);
+        //me.state.transition("fade", "#FFFFFF", 250);
         
         // start the game (Replace with Menu)
         me.state.change(me.state.PLAY);
