@@ -48,17 +48,17 @@ game.WinScreen = me.ScreenObject.extend({
         me.game.world.addChild(new (me.Renderable.extend ({
             // constructor
             init : function () {
-              this._super(me.Renderable, 'init', [0, 0, me.game.viewport.width, me.game.viewport.height]);
+                this._super(me.Renderable, 'init', [0, 0, me.game.viewport.width, me.game.viewport.height]);
         
-            // font for the text
-            this.font = new me.BitmapFont(me.loader.getBinary("PressStart2P"), me.loader.getImage("PressStart2P"));
+                // font for the text
+                this.font = new me.BitmapFont(me.loader.getBinary("PressStart2P"), me.loader.getImage("PressStart2P"));
         
             },
         
             // Draw Text to Screen
             draw : function (renderer) {
-              this.font.draw(renderer, "YOU WIN", 20, 240);
-              this.font.draw(renderer, "PRESS ENTER TO PLAY AGAIN", 40, 240);
+                this.font.draw(renderer, "YOU WIN", 20, 240);
+                this.font.draw(renderer, "PRESS ENTER TO PLAY AGAIN", 40, 240);
             },
         })), 1);
 
