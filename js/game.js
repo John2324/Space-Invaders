@@ -28,7 +28,6 @@ var game = {
         //Create the Menu Screen
         //this.menuScreen = new game.MenuScreen();
         //me.state.set(me.state.MENU, this.menuScreen());
-        //me.state.transition("fade", "#000", 250);
 
         //Create the Loss Screen
         //this.lossScreen = new game.LossScreen();
@@ -38,6 +37,10 @@ var game = {
         this.winScreen = new game.WinScreen();
         me.state.set(me.state.GAME_END, this.winScreen());
 
+
+        // set a global fading transition for the screen
+        me.state.transition("fade", "#FFFFFF", 250);
+        
         // start the game (Replace with Menu)
         me.state.change(me.state.PLAY);
         //me.state.change(me.state.MENU);
