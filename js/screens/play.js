@@ -41,14 +41,6 @@ game.PlayScreen = me.ScreenObject.extend({
     }
   });
 
-
-    /* Add Menu Screen
-game.MenuScreen = me.ScreenObject.extend({
-
-})
-    */
-
-
 //Add Win Screen
 game.WinScreen = me.ScreenObject.extend({
     init: function() {
@@ -64,10 +56,17 @@ game.WinScreen = me.ScreenObject.extend({
         }
         return true;
     }
-})
+});
 
 
     /*
     Add Loss Screen
 
+    */
+
+    
+    /* Add Menu Screen
+game.MenuScreen = me.ScreenObject.extend({
+
+})
     */
