@@ -42,8 +42,32 @@ game.PlayScreen = me.ScreenObject.extend({
   });
 
 
-  /* Add Menu Screen
-  game.MenuScreen = me.ScreenObject.extend({
+    /* Add Menu Screen
+game.MenuScreen = me.ScreenObject.extend({
 
-  })
-*/
+})
+    */
+
+
+//Add Win Screen
+game.WinScreen = me.ScreenObject.extend({
+    init: function() {
+        this.parent(true);
+        me.input.bindKey(me.input.KEY.SPACE, "jump", true);
+    },
+    onResetEvent : function () {
+        me.Text(10, 200, "You Win!");
+    },
+    update: function() {
+        if (me.input.isKeyPressed('jump')) {
+          me.state.change(me.state.PLAY);
+        }
+        return true;
+    }
+})
+
+
+    /*
+    Add Loss Screen
+
+    */
