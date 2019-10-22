@@ -25,7 +25,7 @@ var game = {
         me.state.set(me.state.PLAY, this.playScreen);
         
         //Create the Win Screen
-        me.state.set(me.state.MENU, new game.WinScreen());
+        me.state.set(me.state.MENU, new game.MenuScreen());
 
         //Create the Loss Screen
         //this.lossScreen = new game.LossScreen();

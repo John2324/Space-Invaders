@@ -1,4 +1,4 @@
-game.WinScreen = me.ScreenObject.extend({
+game.MenuScreen = me.ScreenObject.extend({
  /**
    * action to perform on state change
    */
@@ -31,7 +31,7 @@ game.WinScreen = me.ScreenObject.extend({
       },
 
       draw : function (renderer) {
-        this.font.draw(renderer, "PRESS ENTER TO PLAY", 200, 240);
+        this.font.draw(renderer, "PRESS ENTER TO PLAY", 450, 400);
         //this.font.draw(renderer, this.scroller, this.scrollerpos, 440);
       },
       //onDestroyEvent : function () {
