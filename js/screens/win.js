@@ -1,6 +1,6 @@
 game.WinScreen = me.ScreenObject.extend({
     onResetEvent : function () {
-        me.game.world.addChild(new me.ColorLayer("background", "#000000"), 0);
+        //me.game.world.addChild(new me.ColorLayer("background", "#000000"), 0);
         me.game.world.addChild(new (me.Renderable.extend ({
             // constructor
             init : function () {
