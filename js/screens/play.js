@@ -41,7 +41,10 @@ game.PlayScreen = me.ScreenObject.extend({
     }
 });
 
+
+/*
 //Add Win Screen
+
 game.WinScreen = me.ScreenObject.extend({
     onResetEvent : function () {
         me.game.world.addChild(new me.ColorLayer("background", "#000000"), 0);
@@ -81,15 +84,4 @@ game.WinScreen = me.ScreenObject.extend({
 
 });
 
-
-    /*
-    Add Loss Screen
-
-    */
-
-
-    /* Add Menu Screen
-game.MenuScreen = me.ScreenObject.extend({
-
-})
-    */
+*/

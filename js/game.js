@@ -34,11 +34,11 @@ var game = {
         //me.state.set(me.state.GAMOVER, this.lossScreen());
 
         //Create the Win Screen
-        this.winScreen = new game.WinScreen();
-        me.state.set(me.state.GAME_END, this.winScreen());
+        //this.winScreen = new game.WinScreen();
+        //me.state.set(me.state.GAME_END, this.winScreen());
 
 
-        // set a global fading transition for the screen
+        //set a global fading transition for the screen
         //me.state.transition("fade", "#FFFFFF", 250);
         
         // start the game (Replace with Menu)
