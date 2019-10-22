@@ -26,11 +26,11 @@ game.PlayScreen = me.ScreenObject.extend({
         me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
 
          //Add a score reset
-         game.data.score = 0;
+         //game.data.score = 0;
 
          //Add HUD to game world
-         this.HUD = new game.HUD.Container();
-         me.game.world.addChild(this.HUD);
+         //this.HUD = new game.HUD.Container();
+         //me.game.world.addChild(this.HUD);
     },
   
     /**
@@ -44,7 +44,7 @@ game.PlayScreen = me.ScreenObject.extend({
         me.input.unbindKey(me.input.KEY.SPACE);
 
         //remove the HUD from game world
-        me.game.world.removeChild(this.HUD);
+        //me.game.world.removeChild(this.HUD);
         
     }
   });
