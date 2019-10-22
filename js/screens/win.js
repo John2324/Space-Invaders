@@ -31,7 +31,7 @@ game.WinScreen = me.ScreenObject.extend({
       },
 
       draw : function (renderer) {
-        this.font.draw(renderer, "PRESS ENTER TO PLAY", 20, 240);
+        this.font.draw(renderer, "PRESS ENTER TO PLAY", 200, 240);
         //this.font.draw(renderer, this.scroller, this.scrollerpos, 440);
       },
       //onDestroyEvent : function () {
