@@ -18,8 +18,8 @@ game.WinScreen = me.ScreenObject.extend({
          },
    
          draw : function (renderer) {
-           this.font.draw(renderer, "YOU WON", 450, 350);
-           this.font.draw(renderer, "PRESS ENTER TO PLAY Again", 400, 500);
+           this.font.draw(renderer, "YOU WON", 550, 350);
+           this.font.draw(renderer, "Press ENTER to play again", 365, 500);
          },
        })), 1);
    
