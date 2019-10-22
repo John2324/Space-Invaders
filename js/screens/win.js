@@ -15,7 +15,7 @@ game.WinScreen = me.ScreenObject.extend({
             draw : function (renderer) {
                 this.font.draw(renderer, "YOU WIN", 20, 240);
                 this.font.draw(renderer, "PRESS ENTER TO PLAY AGAIN", 40, 240);
-            },
+            }
         })), 1);
 
         // change to play state on press Enter or click/tap
@@ -34,5 +34,4 @@ game.WinScreen = me.ScreenObject.extend({
         me.input.unbindPointer(me.input.pointer.LEFT);
         me.event.unsubscribe(this.handler);
     }
-
 });
