@@ -24,6 +24,13 @@ game.PlayScreen = me.ScreenObject.extend({
         me.input.bindKey(me.input.KEY.A, "left");
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
+
+         //Add a score reset
+         game.data.score = 0;
+
+         //Add HUD to game world
+         this.HUD = new game.HUD.Container();
+         me.game.world.addChild(this.HUD);
     },
   
     /**
@@ -35,6 +42,9 @@ game.PlayScreen = me.ScreenObject.extend({
         me.input.unbindKey(me.input.KEY.A);
         me.input.unbindKey(me.input.KEY.D);
         me.input.unbindKey(me.input.KEY.SPACE);
+
+        //remove the HUD from game world
+        me.game.world.removeChild(this.HUD);
         
     }
   });

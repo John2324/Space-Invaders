@@ -33,6 +33,8 @@ game.Laser = me.Entity.extend({
     
     onCollision : function (res, other) {
         if (other.body.collisionType === me.collision.types.ENEMY_OBJECT) {
+            //give a score
+            game.data.score += 5;
             me.game.world.removeChild(this);
             game.playScreen.enemyManager.removeChild(other);
             return false;
