@@ -1,9 +1,7 @@
 game.PlayScreen = me.ScreenObject.extend({
     checkIfLoss : function (y) {
         if (y >= this.player.pos.y) {
-
-            //Change this code to the "loss" screen with me.state.change(me.state.GAMEOVER)
-           this.reset();
+           me.state.change(me.state.GAMEOVER);
         }
     },
 
@@ -39,4 +37,4 @@ game.PlayScreen = me.ScreenObject.extend({
         me.input.unbindKey(me.input.KEY.SPACE);
         
     }
-});
+  });
