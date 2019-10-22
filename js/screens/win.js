@@ -13,18 +13,18 @@ game.WinScreen = me.ScreenObject.extend({
         this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
 
         // a tween to animate the arrow
-        this.scrollertween = new me.Tween(this).to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
-
-        this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
-        this.scrollerpos = 600;
+        //this.scrollertween = new me.Tween(this).to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
+//
+        //this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
+        //this.scrollerpos = 600;
       },
 
       // some callback for the tween objects
-      scrollover : function () {
+      //scrollover : function () {
         // reset to default value
-        this.scrollerpos = 640;
-        this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
-      },
+        //this.scrollerpos = 640;
+        //this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
+      //},
 
       update : function (dt) {
         return true;
