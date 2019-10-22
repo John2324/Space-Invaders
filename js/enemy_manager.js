@@ -53,7 +53,7 @@ game.EnemyManager = me.Container.extend({
 
     update : function (time) {
         if (this.children.length === 0 && this.createdEnemies) {
-            me.state.change(me.state.GAME_END);
+            game.playScreen.reset();
         }
         this._super(me.Container, "update", [time]);
         this.updateChildBounds();
