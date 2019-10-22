@@ -24,19 +24,17 @@ var game = {
         this.playScreen = new game.PlayScreen();
         me.state.set(me.state.PLAY, this.playScreen);
         
-
-        //Create the Menu Screen
-        //this.menuScreen = new game.MenuScreen();
-        //me.state.set(me.state.MENU, this.menuScreen());
+        //Create the Win Screen
+        this.winScreen = new game.WinScreen();
+        me.state.set(me.state.GAME_END, this.winScreen);
 
         //Create the Loss Screen
         //this.lossScreen = new game.LossScreen();
-        //me.state.set(me.state.GAMOVER, this.lossScreen());
+        //me.state.set(me.state.GAMOVER, this.lossScreen);
 
-        //Create the Win Screen
-        //this.winScreen = new game.WinScreen();
-        //me.state.set(me.state.GAME_END, this.winScreen());
-
+        //Create the Menu Screen
+        //this.menuScreen = new game.MenuScreen();
+        //me.state.set(me.state.MENU, this.menuScreen);
 
         //set a global fading transition for the screen
         //me.state.transition("fade", "#FFFFFF", 250);
