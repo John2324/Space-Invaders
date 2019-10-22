@@ -3,19 +3,6 @@ game.WinScreen = me.ScreenObject.extend({
    * action to perform on state change
    */
     onResetEvent : function () {
-    // title screen
-        var backgroundImage = new me.Sprite(0, 0, {
-            image: me.loader.getImage('title_screen'),
-        }
-    );
-
-    // position and scale to fit with the viewport size
-    backgroundImage.anchorPoint.set(0, 0);
-    backgroundImage.scale(me.game.viewport.width / backgroundImage.width, me.game.viewport.height / backgroundImage.height);
-
-    // add to the world container
-    me.game.world.addChild(backgroundImage, 1);
-
     // add a new renderable component with the scrolling text
     me.game.world.addChild(new (me.Renderable.extend ({
       // constructor
@@ -51,7 +38,7 @@ game.WinScreen = me.ScreenObject.extend({
         //just in case
         this.scrollertween.stop();
       }
-    })), 2);
+    })), 1);
 
     // change to play state on press Enter or click/tap
     me.input.bindKey(me.input.KEY.ENTER, "enter", true);
@@ -60,7 +47,6 @@ game.WinScreen = me.ScreenObject.extend({
       if (action === "enter") {
         // play something on tap / enter
         // this will unlock audio on mobile devices
-        me.audio.play("cling");
         me.state.change(me.state.PLAY);
       }
     });
