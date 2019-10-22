@@ -11,20 +11,7 @@ game.MenuScreen = me.ScreenObject.extend({
 
         // font for the scrolling text
         this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
-
-        // a tween to animate the arrow
-        //this.scrollertween = new me.Tween(this).to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
-//
-        //this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
-        //this.scrollerpos = 600;
       },
-
-      // some callback for the tween objects
-      //scrollover : function () {
-        // reset to default value
-        //this.scrollerpos = 640;
-        //this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
-      //},
 
       update : function (dt) {
         return true;
@@ -34,10 +21,6 @@ game.MenuScreen = me.ScreenObject.extend({
         this.font.draw(renderer, "PRESS ENTER TO PLAY", 450, 400);
         //this.font.draw(renderer, this.scroller, this.scrollerpos, 440);
       },
-      //onDestroyEvent : function () {
-        //just in case
-        //this.scrollertween.stop();
-      //}
     })), 1);
 
     // change to play state on press Enter or click/tap
@@ -45,8 +28,6 @@ game.MenuScreen = me.ScreenObject.extend({
     me.input.bindPointer(me.input.pointer.LEFT, me.input.KEY.ENTER);
     this.handler = me.event.subscribe(me.event.KEYDOWN, function (action, keyCode, edge) {
       if (action === "enter") {
-        // play something on tap / enter
-        // this will unlock audio on mobile devices
         me.state.change(me.state.PLAY);
       }
     });
