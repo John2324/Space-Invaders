@@ -39,7 +39,7 @@ var game = {
         //me.state.transition("fade", "#FFFFFF", 250);
         
         // start the game (Replace with Menu)
-        me.state.change(me.state.GAME_END);
+        me.state.change(me.state.PLAY);
         //me.state.change(me.state.MENU);
     }
 };
