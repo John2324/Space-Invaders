@@ -9,7 +9,7 @@ game.MenuScreen = me.ScreenObject.extend({
       init : function () {
         this._super(me.Renderable, 'init', [0, 0, me.game.viewport.width, me.game.viewport.height]);
 
-        // font for the scrolling text
+        // font for text
         this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
       },
 
@@ -18,8 +18,10 @@ game.MenuScreen = me.ScreenObject.extend({
       },
 
       draw : function (renderer) {
-        this.font.draw(renderer, "PRESS ENTER TO PLAY", 450, 400);
-        //this.font.draw(renderer, this.scroller, this.scrollerpos, 440);
+        this.font.draw(renderer, "HOW TO PLAY", 505, 300);
+        this.font.draw(renderer, "USE ARROWS TO MOVE", 430, 350);
+        this.font.draw(renderer, "PRESS SPACE TO SHOOT", 410, 400);
+        this.font.draw(renderer, "PRESS ENTER TO PLAY", 420, 550);
       },
     })), 1);
 
