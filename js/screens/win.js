@@ -2,7 +2,7 @@ game.WinScreen = me.ScreenObject.extend({
  /**
    * action to perform on state change
    */
-    onResetEvent : function () {
+  onResetEvent : function () {
     // add a new renderable component with the scrolling text
     me.game.world.addChild(new (me.Renderable.extend ({
       // constructor
@@ -55,9 +55,9 @@ game.WinScreen = me.ScreenObject.extend({
   /**
    * action to perform when leaving this screen (state change)
    */
-    onDestroyEvent : function () {
-        me.input.unbindKey(me.input.KEY.ENTER);
-        me.input.unbindPointer(me.input.pointer.LEFT);
-        me.event.unsubscribe(this.handler);
-    }
+  onDestroyEvent : function () {
+    me.input.unbindKey(me.input.KEY.ENTER);
+    me.input.unbindPointer(me.input.pointer.LEFT);
+    me.event.unsubscribe(this.handler);
+  }
 });
