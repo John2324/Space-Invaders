@@ -4,7 +4,7 @@ This is a Space Invaders type of game using the MelonJS boilerplate. The boilerp
 
 Click [HERE](http://melonjs.github.io/tutorial-space-invaders/) for the Space Invaders tutorial.
 
-This is the outut when completed:
+This is the output when completed:
 
 ![Game-Screen](data/screenshots/screenshot1.png)
 
