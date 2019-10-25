@@ -8,7 +8,7 @@ This is the output when completed:
 
 ![Game-Screen](data/screenshots/screenshot1.png)
 
-Additional Challenges are also provided in the tutorial.
+Additional challenges are also provided in the tutorial.
 Here are some screenshots.
 
 Challenge 1:
