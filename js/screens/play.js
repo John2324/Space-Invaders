@@ -19,18 +19,16 @@ game.PlayScreen = me.ScreenObject.extend({
         me.game.world.addChild(this.enemyManager, 2);
 
 
+        this.HUD = new game.HUD.Container();
+        me.game.world.addChild(this.HUD);
+
+
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
         me.input.bindKey(me.input.KEY.A, "left");
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.SPACE, "shoot", true);
 
-        //Add a score reset
-        game.data.score = 0;
-
-        //Add HUD to game world
-        this.HUD = new game.HUD.Container();
-        me.game.world.addChild(this.HUD, 3);
     },
   
     /**
