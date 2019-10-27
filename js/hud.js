@@ -39,7 +39,7 @@ game.HUD.ScoreItem = me.Renderable.extend( {
   
       // font alignment to right, bottom
       this.font.textAlign = "right";
-      this.font.textBaseline = "bottom";
+      this.font.textBaseline = "top";
   
       // local copy of the global score
       this.score = -1;
