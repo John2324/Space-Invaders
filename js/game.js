@@ -2,8 +2,12 @@ var game = {
 
     data : {
         score : 0,
-        wave : 0
     },
+
+    wave : {
+        score : 0,
+    },
+
     // Run on page load.
     onload : function () {
         // Initialize the video.

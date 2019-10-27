@@ -44,7 +44,7 @@ game.HUD.ScoreItem = me.Renderable.extend( {
       this.font.textBaseline = "bottom";
   
       // local copy of the global score
-      this.score = -1;
+      this.score = -1;      
     },
   
     /**
