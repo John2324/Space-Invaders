@@ -20,6 +20,8 @@ game.LossScreen = me.ScreenObject.extend({
    
          draw : function (renderer) {
            this.font.draw(renderer, "YOU LOST", me.game.viewport.width, 350);
+           this.font.draw(renderer, "Score: "+ game.data.score, me.game.viewport.width, 380);
+           this.font.draw(renderer, "Waves Passed: "+ game.data.wave, me.game.viewport.width, 410);
            this.font.draw(renderer, "Press ENTER to play again", me.game.viewport.width, 500);
          },
        })), 1);
@@ -41,6 +43,8 @@ game.LossScreen = me.ScreenObject.extend({
        me.input.unbindKey(me.input.KEY.ENTER);
        me.input.unbindPointer(me.input.pointer.LEFT);
        me.event.unsubscribe(this.handler);
+       game.data.score = 0;
+       game.data.wave = 0;
      }
    });
    

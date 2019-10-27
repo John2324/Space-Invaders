@@ -16,6 +16,7 @@ game.WinScreen = me.ScreenObject.extend({
    
          update : function (dt) {
            return true;
+           game.data.wave += 1;
          },
    
          draw : function (renderer) {

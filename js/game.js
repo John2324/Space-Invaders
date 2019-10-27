@@ -1,7 +1,8 @@
 var game = {
 
     data : {
-        score : 0
+        score : 0,
+        wave : 0
     },
     // Run on page load.
     onload : function () {
