@@ -72,7 +72,7 @@ game.HUD.ScoreItem = me.Renderable.extend( {
           // this.pos.x, this.pos.y are the relative position from the screen right bottom
           this.font.draw (renderer, game.playScreen.enemyManager.children.length, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-440);
           this.font.draw (renderer, game.playScreen.enemyManager.vel, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-400);
-          this.font.draw (renderer, "Score: " + game.data.score, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-5);
-          this.font.draw (renderer, game.data.wave, me.game.viewport.width + this.pos.x-300, me.game.viewport.height + this.pos.y-5);
+          this.font.draw (renderer, "Score:" + game.data.score, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-5);
+          this.font.draw (renderer, "Wave:" + game.data.wave, me.game.viewport.width + this.pos.x-480, me.game.viewport.height + this.pos.y-5);
     }
   });
