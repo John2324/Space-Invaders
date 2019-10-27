@@ -1,7 +1,9 @@
 /**
  * a HUD container and child items
  */
+
 game.HUD = game.HUD || {};
+
 
 game.HUD.Container = me.Container.extend({
   init: function () {
@@ -39,7 +41,7 @@ game.HUD.ScoreItem = me.Renderable.extend( {
   
       // font alignment to right, bottom
       this.font.textAlign = "right";
-      this.font.textBaseline = "top";
+      this.font.textBaseline = "bottom";
   
       // local copy of the global score
       this.score = -1;
