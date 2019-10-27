@@ -11,6 +11,7 @@ game.MenuScreen = me.ScreenObject.extend({
 
         // font for text
         this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
+        this.font.textAlign = "center";
       },
 
       update : function (dt) {
@@ -18,10 +19,10 @@ game.MenuScreen = me.ScreenObject.extend({
       },
 
       draw : function (renderer) {
-        this.font.draw(renderer, "HOW TO PLAY", 505, 300);
-        this.font.draw(renderer, "USE ARROWS TO MOVE", 430, 350);
-        this.font.draw(renderer, "PRESS SPACE TO SHOOT", 410, 400);
-        this.font.draw(renderer, "PRESS ENTER TO PLAY", 420, 550);
+        this.font.draw(renderer, "HOW TO PLAY", me.game.viewport.width, 300);
+        this.font.draw(renderer, "Use arrows to move", me.game.viewport.width, 350);
+        this.font.draw(renderer, "Press SPACE to shoot", me.game.viewport.width, 400);
+        this.font.draw(renderer, "Press ENTER to play", me.game.viewport.width, 550);
       },
     })), 1);
 

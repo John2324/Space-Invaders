@@ -11,6 +11,7 @@ game.LossScreen = me.ScreenObject.extend({
    
            // font for text
            this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
+           this.font.textAlign = "center";
          },
    
          update : function (dt) {
@@ -18,8 +19,8 @@ game.LossScreen = me.ScreenObject.extend({
          },
    
          draw : function (renderer) {
-           this.font.draw(renderer, "YOU LOST", 550, 350);
-           this.font.draw(renderer, "Press ENTER to play again", 365, 500);
+           this.font.draw(renderer, "YOU LOST", me.game.viewport.width, 350);
+           this.font.draw(renderer, "Press ENTER to play again", me.game.viewport.width, 500);
          },
        })), 1);
    
