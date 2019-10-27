@@ -44,7 +44,8 @@ game.HUD.ScoreItem = me.Renderable.extend( {
       this.font.textBaseline = "bottom";
   
       // local copy of the global score
-      this.score = -1;      
+      this.score = -1;
+      this.wave = -1;      
     },
   
     /**
@@ -55,6 +56,10 @@ game.HUD.ScoreItem = me.Renderable.extend( {
       // return true if the score has been updated
       if (this.score !== game.data.score) {
         this.score = game.data.score;
+        return true;
+      }
+      if (this.wave !== game.data.wave) {
+        this.wave = game.data.wave;
         return true;
       }
       return false;
@@ -68,5 +73,6 @@ game.HUD.ScoreItem = me.Renderable.extend( {
           this.font.draw (renderer, game.playScreen.enemyManager.children.length, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-440);
           this.font.draw (renderer, game.playScreen.enemyManager.vel, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-400);
           this.font.draw (renderer, "Score: " + game.data.score, me.game.viewport.width + this.pos.x, me.game.viewport.height + this.pos.y-5);
+          this.font.draw (renderer, game.data.wave, me.game.viewport.width + this.pos.x-300, me.game.viewport.height + this.pos.y-5);
     }
   });

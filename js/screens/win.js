@@ -5,11 +5,11 @@ game.WinScreen = me.ScreenObject.extend({
       onResetEvent : function () {
         // add a new renderable component with the scrolling text
         me.game.world.addChild(new (me.Renderable.extend ({
-         // constructor
+          // constructor
           init : function () {
             this._super(me.Renderable, 'init', [0, 0, me.game.viewport.width, me.game.viewport.height]);
    
-           // font for text
+            // font for text
             this.font = new me.BitmapFont(me.loader.getBinary('PressStart2P'), me.loader.getImage('PressStart2P'));
             this.font.textAlign = "center";
           },
@@ -20,7 +20,7 @@ game.WinScreen = me.ScreenObject.extend({
    
           draw : function (renderer) {
             this.font.draw(renderer, "YOU WON", me.game.viewport.width, 350);
-            this.font.draw(renderer, "Press ENTER to play again", me.game.viewport.width, 500);
+            this.font.draw(renderer, "Press ENTER for next wave", me.game.viewport.width, 500);
          },
        })), 1);
          
@@ -41,8 +41,6 @@ game.WinScreen = me.ScreenObject.extend({
         me.input.unbindKey(me.input.KEY.ENTER);
         me.input.unbindPointer(me.input.pointer.LEFT);
         me.event.unsubscribe(this.handler);
-        //Update Wave Count
-        game.wave.score += 1;
       }
 });
    
