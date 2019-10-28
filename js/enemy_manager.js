@@ -23,11 +23,11 @@ game.EnemyManager = me.Container.extend({
         var _this = this;
         this.timer = me.timer.setInterval(function () {
             var bounds = _this.childBounds;
-            
+
             if ((_this.vel > 0 && (bounds.right + _this.vel) >= me.game.viewport.width) ||
                 (_this.vel < 0 && (bounds.left + _this.vel) <= 0)) {
-                _this.vel *= -1 + -(1.5 * (game.data.wave-1));
-                _this.pos.y += 16+(game.data.wave);
+                _this.vel *= -1;
+                _this.pos.y += 16;
                 if (_this.vel > 0) {
                   _this.vel += 5;
                 }
