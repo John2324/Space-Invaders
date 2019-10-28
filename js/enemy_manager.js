@@ -26,12 +26,12 @@ game.EnemyManager = me.Container.extend({
             if ((_this.vel > 0 && (bounds.right + _this.vel) >= me.game.viewport.width) ||
                 (_this.vel < 0 && (bounds.left + _this.vel) <= 0)) {
                 _this.vel *= -1;
-                _this.pos.y += 16;
+                _this.pos.y += 16+(1*(game.data.wave-1));
                 if (_this.vel > 0) {
-                  _this.vel += 5;
+                  _this.vel += 5+(1.5*(game.data.wave-1));
                 }
                 else {
-                  _this.vel -= 5;
+                  _this.vel -= 5+(1.5*(game.data.wave-1));
                 }
                 game.playScreen.checkIfLoss(bounds.bottom); // <<<
             }
