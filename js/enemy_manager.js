@@ -6,7 +6,7 @@ game.EnemyManager = me.Container.extend({
         ]);
         this.COLS = 9;
         this.ROWS = 4;
-        this.vel = 16;
+        this.vel = 16+(4*game.data.wave);
     },
 
     createEnemies : function () {
@@ -23,7 +23,6 @@ game.EnemyManager = me.Container.extend({
         var _this = this;
         this.timer = me.timer.setInterval(function () {
             var bounds = _this.childBounds;
-
             if ((_this.vel > 0 && (bounds.right + _this.vel) >= me.game.viewport.width) ||
                 (_this.vel < 0 && (bounds.left + _this.vel) <= 0)) {
                 _this.vel *= -1;

@@ -24,8 +24,6 @@ game.PlayScreen = me.ScreenObject.extend({
 
         //Update wave count
         game.data.wave += 1;
-        //Update wave velocity
-        game.playScreen.enemyManager.vel += 3;
 
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
